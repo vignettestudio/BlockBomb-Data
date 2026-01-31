@@ -1,40 +1,79 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy</title>
 <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
-    h1 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    /* 기본 스타일 초기화 */
+    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+    
+    /* 제목 스타일 */
+    h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
     h2 { color: #555; margin-top: 30px; }
+    
+    /* 버튼 그룹 스타일 */
     .btn-group { margin-bottom: 30px; text-align: center; }
+    
+    /* 버튼 디자인 */
     .btn { 
-        display: inline-block; padding: 10px 15px; margin: 5px; 
-        border: 1px solid #ddd; border-radius: 5px; cursor: pointer; 
-        background-color: #f9f9f9; font-weight: bold; text-decoration: none; color: #333;
+        display: inline-block; 
+        padding: 10px 20px; 
+        margin: 5px; 
+        border: 1px solid #ddd; 
+        border-radius: 20px; /* 둥근 버튼 */
+        cursor: pointer; 
+        background-color: #f9f9f9; 
+        font-weight: bold; 
+        text-decoration: none; 
+        color: #555;
+        transition: 0.2s;
     }
+    
+    /* 마우스 올렸을 때 */
     .btn:hover { background-color: #eee; }
-    .btn.active { background-color: #333; color: white; border-color: #333; }
-    .content-section { display: none; } /* 기본적으로 다 숨김 */
-    .show { display: block; } /* 선택된 것만 보임 */
+    
+    /* 선택된 버튼 스타일 (파란색 배경에 흰 글씨) */
+    .btn.active { 
+        background-color: #007bff !important; /* 진한 파랑 */
+        color: white !important; 
+        border-color: #007bff !important; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* 내용 섹션 제어 */
+    .content-section { display: none; } /* 기본 숨김 */
+    .show { display: block; } /* 보임 처리 */
+    
+    /* 링크 색상 */
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 </style>
 <script>
     function showLang(langId) {
-        // 모든 내용을 숨김
+        // 모든 내용 숨기기
         var contents = document.getElementsByClassName('content-section');
         for (var i = 0; i < contents.length; i++) {
             contents[i].style.display = 'none';
         }
-        // 모든 버튼의 활성화 표시를 끔
+        // 모든 버튼 비활성화
         var buttons = document.getElementsByClassName('btn');
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].classList.remove('active');
         }
-        // 선택한 언어만 보여줌
+        // 선택한 언어만 보이기
         document.getElementById(langId).style.display = 'block';
-        // 선택한 버튼을 활성화함
+        // 선택한 버튼 활성화 (색상 변경)
         document.getElementById('btn-' + langId).classList.add('active');
     }
+
+    // 페이지 로드 시 영어 자동 선택
+    window.onload = function() {
+        showLang('en');
+    };
 </script>
 </head>
 <body>
@@ -57,8 +96,8 @@
 
     <h3>2. Third-Party Services</h3>
     <ul>
-        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy">Unity Privacy Policy</a></li>
+        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity Privacy Policy</a></li>
     </ul>
 
     <h3>3. Contact Us</h3>
@@ -78,8 +117,8 @@
 
     <h3>2. 제3자 서비스 제공자</h3>
     <ul>
-        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy">Google 개인정보 처리방침</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy">Unity 개인정보 처리방침</a></li>
+        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보 처리방침</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity 개인정보 처리방침</a></li>
     </ul>
 
     <h3>3. 문의하기</h3>
@@ -99,8 +138,8 @@
 
     <h3>2. 第三者サービス</h3>
     <ul>
-        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy">Google プライバシーポリシー</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy">Unity プライバシーポリシー</a></li>
+        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google プライバシーポリシー</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity プライバシーポリシー</a></li>
     </ul>
 
     <h3>3. お問い合わせ</h3>
@@ -120,8 +159,8 @@
 
     <h3>2. 第三方服务</h3>
     <ul>
-        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy">Google 隐私权政策</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy">Unity 隐私政策</a></li>
+        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google 隐私权政策</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity 隐私政策</a></li>
     </ul>
 
     <h3>3. 联系我们</h3>
@@ -141,8 +180,8 @@
 
     <h3>2. Servicios de terceros</h3>
     <ul>
-        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy">Política de privacidad de Google</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy">Política de privacidad de Unity</a></li>
+        <li><strong>Google AdMob / Firebase:</strong> <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad de Google</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Política de privacidad de Unity</a></li>
     </ul>
 
     <h3>3. Contáctenos</h3>
