@@ -1,6 +1,3 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +26,7 @@ layout: null
     .game-img { 
         max-width: 100%; 
         height: auto; 
-        max-height: 600px; /* 세로 이미지가 너무 크지 않게 조절 */
+        max-height: 600px; 
         border-radius: 15px; 
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         margin: 20px 0;
@@ -39,7 +36,17 @@ layout: null
     .content-section { display: none; text-align: left; }
     .show { display: block; }
     
-    h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
+    /* 제목과 배지 정렬용 스타일 */
+    .game-header {
+        border-bottom: 2px solid #eee; 
+        padding-bottom: 10px; 
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap; /* 모바일 줄바꿈 허용 */
+    }
+
     ul { margin-bottom: 30px; }
     li { margin-bottom: 10px; }
     
@@ -77,7 +84,13 @@ layout: null
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
 
-    <h2>🎮 Our Project: Block Bomb</h2>
+    <h2 class="game-header">
+        🎮 Our Project: Block Bomb
+        <a href="#" target="_blank" style="text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
+        </a>
+    </h2>
+
     <p>Strategic explosions on a chessboard! Place blocks, trigger chains, and challenge your high score.</p>
     
     <h3>Key Features</h3>
@@ -101,7 +114,13 @@ layout: null
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
 
-    <h2>🎮 프로젝트: 블록밤 (Block Bomb)</h2>
+    <h2 class="game-header">
+        🎮 프로젝트: 블록밤 (Block Bomb)
+        <a href="#" target="_blank" style="text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
+        </a>
+    </h2>
+
     <p>체스보드 위에서 펼쳐지는 전략적인 폭발! 블록을 배치하고 터뜨리며 최고 점수에 도전하세요.</p>
     
     <h3>주요 특징</h3>
@@ -125,7 +144,13 @@ layout: null
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
 
-    <h2>🎮 Block Bomb (ブロックボム)</h2>
+    <h2 class="game-header">
+        🎮 Block Bomb (ブロックボム)
+        <a href="#" target="_blank" style="text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
+        </a>
+    </h2>
+
     <p>チェス盤の上で繰り広げられる戦略的爆発！ブロックを配置して連鎖させ、ハイスコアを目指しましょう。</p>
     
     <h3>特徴</h3>
@@ -149,7 +174,13 @@ layout: null
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
 
-    <h2>🎮 Block Bomb (方块炸弹)</h2>
+    <h2 class="game-header">
+        🎮 Block Bomb (方块炸弹)
+        <a href="#" target="_blank" style="text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
+        </a>
+    </h2>
+
     <p>棋盘上的策略爆炸！放置方块，引爆连琐，挑战最高分。</p>
     
     <h3>主要特点</h3>
@@ -173,7 +204,13 @@ layout: null
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
 
-    <h2>🎮 Proyecto: Block Bomb</h2>
+    <h2 class="game-header">
+        🎮 Proyecto: Block Bomb
+        <a href="#" target="_blank" style="text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
+        </a>
+    </h2>
+
     <p>¡Explosiones estratégicas en un tablero de ajedrez! Coloca bloques y desafía tu puntuación más alta.</p>
     
     <h3>Características</h3>
