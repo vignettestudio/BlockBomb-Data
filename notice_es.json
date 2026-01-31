@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": 3,
+      "date": "2026-02-05",
+      "title": "Mantenimiento de Emergencia",
+      "content": "El mantenimiento del servidor se llevará a cabo de 2 AM a 4 AM. Disculpen las molestias."
+    },
+    {
+      "id": 2,
+      "date": "2026-02-01",
+      "title": "¡Celebración de Actualización!",
+      "content": "Se han añadido nuevos bloques y sistemas de clasificación. ¡Échales un vistazo ahora!"
+    },
+    {
+      "id": 1,
+      "date": "2026-01-31",
+      "title": "¡Block Bomb Abierto!",
+      "content": "Hola, somos Loop Studio. Block Bomb ha sido lanzado oficialmente. ¡Gracias por jugar!"
+    }
+  ]
+}
