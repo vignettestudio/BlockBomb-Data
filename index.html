@@ -44,7 +44,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        flex-wrap: wrap; /* 모바일 줄바꿈 허용 */
+        flex-wrap: wrap;
     }
 
     ul { margin-bottom: 30px; }
@@ -60,8 +60,12 @@
         for (var i = 0; i < contents.length; i++) { contents[i].style.display = 'none'; }
         var buttons = document.getElementsByClassName('btn');
         for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove('active'); }
-        document.getElementById(langId).style.display = 'block';
-        document.getElementById('btn-' + langId).classList.add('active');
+        
+        var targetContent = document.getElementById(langId);
+        var targetButton = document.getElementById('btn-' + langId);
+        
+        if (targetContent) targetContent.style.display = 'block';
+        if (targetButton) targetButton.classList.add('active');
     }
     window.onload = function() { showLang('en'); };
 </script>
@@ -72,158 +76,129 @@
     <a id="btn-en" class="btn active" onclick="showLang('en')">English</a>
     <a id="btn-ko" class="btn" onclick="showLang('ko')">한국어</a>
     <a id="btn-ja" class="btn" onclick="showLang('ja')">日本語</a>
-    <a id="btn-zh" class="btn" onclick="showLang('zh')">中文</a>
+    <a id="btn-tw" class="btn" onclick="showLang('tw')">繁體中文</a>
+    <a id="btn-cn" class="btn" onclick="showLang('cn')">简体中文</a>
     <a id="btn-es" class="btn" onclick="showLang('es')">Español</a>
 </div>
 
 <div id="en" class="content-section">
     <div style="text-align: center;">
-        <h1>Welcome to Vignette Studio 🎬</h1>
+        <h1>Welcome to Vignette Studio</h1>
         <p class="slogan">"Small scenes make memorable stories."</p>
-        
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
-
     <h2 class="game-header">
         🎮 Our Project: Block Bomb
-        <a href="#" target="_blank" style="text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
-        </a>
+        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130"></a>
     </h2>
-
     <p>Strategic explosions on a chessboard! Place blocks, trigger chains, and challenge your high score.</p>
-    
     <h3>Key Features</h3>
     <ul>
         <li>🧩 <strong>Strategic Puzzle:</strong> Brain-teasing gameplay using limited space.</li>
         <li>💥 <strong>Satisfying Action:</strong> Cool explosion effects and impact.</li>
         <li>🏆 <strong>Global Challenge:</strong> Compete with players around the world.</li>
     </ul>
-
-    <div class="footer-links">
-        Contact: vignettemanager@gmail.com | 
-        <a href="PRIVACY">Privacy Policy</a>
-    </div>
+    <div class="footer-links">Contact: vignettemanager@gmail.com | <a href="PRIVACY_en.html">Privacy Policy</a></div>
 </div>
 
 <div id="ko" class="content-section">
     <div style="text-align: center;">
-        <h1>Vignette Studio에 오신 것을 환영합니다 🎬</h1>
+        <h1>Vignette Studio에 오신 것을 환영합니다</h1>
         <p class="slogan">"작은 장면 하나하나가 모여 기억에 남는 이야기를 만듭니다."</p>
-
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
-
     <h2 class="game-header">
         🎮 프로젝트: 블록밤 (Block Bomb)
-        <a href="#" target="_blank" style="text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
-        </a>
+        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130"></a>
     </h2>
-
     <p>체스보드 위에서 펼쳐지는 전략적인 폭발! 블록을 배치하고 터뜨리며 최고 점수에 도전하세요.</p>
-    
     <h3>주요 특징</h3>
     <ul>
         <li>🧩 <strong>전략 퍼즐:</strong> 체스판 위의 한정된 공간을 활용하는 두뇌 플레이</li>
         <li>💥 <strong>시원한 타격감:</strong> 팡팡 터지는 폭발 이펙트와 손맛</li>
         <li>🏆 <strong>랭킹 경쟁:</strong> 전 세계 유저들과 경쟁하는 스코어 시스템</li>
     </ul>
-
-    <div class="footer-links">
-        이메일: vignettemanager@gmail.com | 
-        <a href="PRIVACY">개인정보 처리방침</a>
-    </div>
+    <div class="footer-links">이메일: vignettemanager@gmail.com | <a href="PRIVACY_kr.html">개인정보 처리방침</a></div>
 </div>
 
 <div id="ja" class="content-section">
     <div style="text-align: center;">
-        <h1>Vignette Studioへようこそ 🎬</h1>
+        <h1>Vignette Studioへようこそ</h1>
         <p class="slogan">「小さなシーンが積み重なり、記憶に残る物語を作ります」</p>
-
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
-
     <h2 class="game-header">
         🎮 Block Bomb (ブロックボム)
-        <a href="#" target="_blank" style="text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
-        </a>
+        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130"></a>
     </h2>
-
     <p>チェス盤の上で繰り広げられる戦略的爆発！ブロックを配置して連鎖させ、ハイスコアを目指しましょう。</p>
-    
     <h3>特徴</h3>
     <ul>
         <li>🧩 <strong>戦略パズル:</strong> 限られたスペースを活用する頭脳プレイ</li>
         <li>💥 <strong>爽快なアクション:</strong> 気持ちよく弾ける爆発エフェクト</li>
         <li>🏆 <strong>ランキング:</strong> 世界中のユーザーとスコアを競う</li>
     </ul>
-
-    <div class="footer-links">
-        メール: vignettemanager@gmail.com | 
-        <a href="PRIVACY">プライバシーポリシー</a>
-    </div>
+    <div class="footer-links">メール: vignettemanager@gmail.com | <a href="PRIVACY_ja.html">プライバシーポリシー</a></div>
 </div>
 
-<div id="zh" class="content-section">
+<div id="tw" class="content-section">
     <div style="text-align: center;">
-        <h1>欢迎来到 Vignette Studio 🎬</h1>
-        <p class="slogan">“每一个小场景，汇聚成难忘的故事。”</p>
-
+        <h1>歡迎來到 Vignette Studio</h1>
+        <p class="slogan">「每一個小場景，匯聚成難忘的故事。」</p>
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
+    <h2 class="game-header">
+        🎮 Block Bomb (方塊炸彈)
+        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130"></a>
+    </h2>
+    <p>棋盤上的策略爆炸！放置方塊，引爆連鎖，挑戰最高分。</p>
+    <h3>主要特點</h3>
+    <ul>
+        <li>🧩 <strong>策略益智:</strong> 利用有限空間的腦力遊戲</li>
+        <li>💥 <strong>爽快打擊感:</strong> 酷炫的爆炸特效與手感</li>
+        <li>🏆 <strong>全球排行:</strong> 與全世界玩家競爭分數</li>
+    </ul>
+    <div class="footer-links">郵箱: vignettemanager@gmail.com | <a href="PRIVACY_tw.html">隱私政策</a></div>
+</div>
 
+<div id="cn" class="content-section">
+    <div style="text-align: center;">
+        <h1>欢迎来到 Vignette Studio</h1>
+        <p class="slogan">“每一个小场景，汇聚成难忘的故事。”</p>
+        <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
+    </div>
     <h2 class="game-header">
         🎮 Block Bomb (方块炸弹)
-        <a href="#" target="_blank" style="text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
-        </a>
+        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130"></a>
     </h2>
-
     <p>棋盘上的策略爆炸！放置方块，引爆连琐，挑战最高分。</p>
-    
     <h3>主要特点</h3>
     <ul>
         <li>🧩 <strong>策略益智:</strong> 利用有限空间的脑力游戏</li>
         <li>💥 <strong>爽快打击感:</strong> 酷炫的爆炸特效与手感</li>
         <li>🏆 <strong>全球排行:</strong> 与全世界玩家竞争分数</li>
     </ul>
-
-    <div class="footer-links">
-        邮箱: vignettemanager@gmail.com | 
-        <a href="PRIVACY">隐私政策</a>
-    </div>
+    <div class="footer-links">邮箱: vignettemanager@gmail.com | <a href="PRIVACY_cn.html">隐私政策</a></div>
 </div>
 
 <div id="es" class="content-section">
     <div style="text-align: center;">
-        <h1>Bienvenido a Vignette Studio 🎬</h1>
+        <h1>Bienvenido a Vignette Studio</h1>
         <p class="slogan">"Las pequeñas escenas crean historias memorables."</p>
-
         <img src="intrologo.png" class="game-img" alt="Block Bomb Gameplay">
     </div>
-
     <h2 class="game-header">
         🎮 Proyecto: Block Bomb
-        <a href="#" target="_blank" style="text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130">
-        </a>
+        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="130"></a>
     </h2>
-
     <p>¡Explosiones estratégicas en un tablero de ajedrez! Coloca bloques y desafía tu puntuación más alta.</p>
-    
     <h3>Características</h3>
     <ul>
         <li>🧩 <strong>Puzle estratégico:</strong> Juego mental utilizando espacio limitado.</li>
         <li>💥 <strong>Acción satisfactoria:</strong> Efectos de explosión geniales.</li>
         <li>🏆 <strong>Desafío global:</strong> Compite con jugadores de todo el mundo.</li>
     </ul>
-
-    <div class="footer-links">
-        Email: vignettemanager@gmail.com | 
-        <a href="PRIVACY">Política de privacidad</a>
-    </div>
+    <div class="footer-links">Email: vignettemanager@gmail.com | <a href="PRIVACY_es.html">Política de privacidad</a></div>
 </div>
 
 </body>
