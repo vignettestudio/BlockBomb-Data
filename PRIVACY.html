@@ -10,7 +10,7 @@
     
     /* 제목 스타일 */
     h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
-    h2 { color: #007bff; margin-top: 30px; font-size: 1.2em; } /* 파란색 포인트 */
+    h2 { color: #007bff; margin-top: 30px; font-size: 1.2em; }
     h3 { color: #555; margin-top: 20px; }
     
     /* 버튼 그룹 스타일 */
@@ -57,8 +57,12 @@
         for (var i = 0; i < contents.length; i++) { contents[i].style.display = 'none'; }
         var buttons = document.getElementsByClassName('btn');
         for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove('active'); }
-        document.getElementById(langId).style.display = 'block';
-        document.getElementById('btn-' + langId).classList.add('active');
+        
+        var targetContent = document.getElementById(langId);
+        var targetButton = document.getElementById('btn-' + langId);
+        
+        if (targetContent) targetContent.style.display = 'block';
+        if (targetButton) targetButton.classList.add('active');
     }
     window.onload = function() { showLang('en'); };
 </script>
@@ -69,7 +73,8 @@
     <a id="btn-en" class="btn active" onclick="showLang('en')">English</a>
     <a id="btn-ko" class="btn" onclick="showLang('ko')">한국어</a>
     <a id="btn-ja" class="btn" onclick="showLang('ja')">日本語</a>
-    <a id="btn-zh" class="btn" onclick="showLang('zh')">中文</a>
+    <a id="btn-tw" class="btn" onclick="showLang('tw')">繁體中文</a>
+    <a id="btn-cn" class="btn" onclick="showLang('cn')">简体中文</a>
     <a id="btn-es" class="btn" onclick="showLang('es')">Español</a>
 </div>
 
@@ -85,7 +90,7 @@
         <li><strong>Game Data:</strong> Your scores and progress are stored to maintain your gameplay history.</li>
     </ul>
 
-    <h2>2. Data Deletion Requests (Crucial)</h2>
+    <h2>2. Data Deletion Requests</h2>
     <p>You have the right to request the deletion of your personal data stored in our game. If you wish to delete your account and game data, please contact us at:</p>
     <ul>
         <li><strong>Email:</strong> vignettemanager@gmail.com</li>
@@ -93,10 +98,9 @@
     <p>Upon receiving your request, we will permanently delete your User ID, scores, and progress from our servers within 30 days.</p>
 
     <h2>3. Third-Party Services</h2>
-    <p>Our game uses third-party services that may collect information used to identify you:</p>
     <ul>
-        <li><strong>Google Play Services:</strong> Sign-in, Leaderboards. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> Advertisement. <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
+        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
     </ul>
 
     <h2>4. Contact Us</h2>
@@ -115,7 +119,7 @@
         <li><strong>게임 데이터:</strong> 점수, 진행 상황 등의 데이터가 저장됩니다.</li>
     </ul>
 
-    <h2>2. 데이터 삭제 요청 (필수)</h2>
+    <h2>2. 데이터 삭제 요청</h2>
     <p>사용자는 언제든지 자신의 개인정보 삭제를 요청할 수 있습니다. 계정 및 게임 데이터 삭제를 원하실 경우 아래 이메일로 문의해 주세요:</p>
     <ul>
         <li><strong>이메일:</strong> vignettemanager@gmail.com</li>
@@ -123,10 +127,9 @@
     <p>요청이 접수되면 30일 이내에 서버에서 귀하의 사용자 ID와 모든 게임 데이터를 영구적으로 삭제합니다.</p>
 
     <h2>3. 제3자 서비스 제공자</h2>
-    <p>이 앱은 다음과 같은 제3자 서비스를 이용하며, 해당 서비스는 자체적인 개인정보 처리방침에 따라 정보를 수집할 수 있습니다:</p>
     <ul>
-        <li><strong>Google Play Services:</strong> 로그인, 랭킹. <a href="https://policies.google.com/privacy" target="_blank">개인정보 처리방침</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> 광고 송출. <a href="https://unity3d.com/legal/privacy-policy" target="_blank">개인정보 처리방침</a></li>
+        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">개인정보 처리방침</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">개인정보 처리방침</a></li>
     </ul>
 
     <h2>4. 문의하기</h2>
@@ -154,17 +157,46 @@
 
     <h2>3. 第三者サービス</h2>
     <ul>
-        <li><strong>Google Play Services:</strong> サインイン、ランキング。<a href="https://policies.google.com/privacy" target="_blank">Google ポリシー</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> 広告配信。<a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity ポリシー</a></li>
+        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google ポリシー</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity ポリシー</a></li>
     </ul>
 
     <h2>4. お問い合わせ</h2>
     <p>ご質問等は <strong>vignettemanager@gmail.com</strong> までご連絡ください。</p>
 </div>
 
-<div id="zh" class="content-section">
+<div id="tw" class="content-section">
+    <h1>隱私權政策</h1>
+    <p><strong>生效日期:</strong> 2026年2월 1일</p>
+    <p><strong>Vignette Studio</strong> 非常重視您的隱私。本政策說明我們在 <strong>Block Bomb</strong> 中如何收集和使用資訊。</p>
+
+    <h2>1. 我們收集的資訊</h2>
+    <p>為了提供更好的遊戲體驗，我們透過 <strong>Google 登入</strong> 收集以下最少資訊：</p>
+    <ul>
+        <li><strong>使用者ID和暱稱:</strong> 用於識別帳戶並在排行榜上顯示您的名字。</li>
+        <li><strong>遊戲數據:</strong> 儲存您的分數和遊戲進度。</li>
+    </ul>
+
+    <h2>2. 數據刪除請求</h2>
+    <p>您有權請求刪除儲存在我們遊戲中的個人數據。如果您希望刪除帳戶和數據(個人資料)，請聯繫我們：</p>
+    <ul>
+        <li><strong>電子郵件:</strong> vignettemanager@gmail.com</li>
+    </ul>
+    <p>收到請求後，我們將在30天內從伺服器永久刪除您的使用者ID和所有遊戲數據。</p>
+
+    <h2>3. 第三方服務</h2>
+    <ul>
+        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">隱私權政策</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">隱私權政策</a></li>
+    </ul>
+
+    <h2>4. 聯繫我們</h2>
+    <p>如有疑問，請聯繫 <strong>vignettemanager@gmail.com</strong>。</p>
+</div>
+
+<div id="cn" class="content-section">
     <h1>隐私政策</h1>
-    <p><strong>生效日期:</strong> 2026年2月1日</p>
+    <p><strong>生效日期:</strong> 2026年2月1일</p>
     <p><strong>Vignette Studio</strong> 非常重视您的隐私。本政策说明我们在 <strong>Block Bomb</strong> 中如何收集和使用信息。</p>
 
     <h2>1. 我们收集的信息</h2>
@@ -183,8 +215,8 @@
 
     <h2>3. 第三方服务</h2>
     <ul>
-        <li><strong>Google Play Services:</strong> 登录, 排行榜。<a href="https://policies.google.com/privacy" target="_blank">隐私权政策</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> 广告服务。<a href="https://unity3d.com/legal/privacy-policy" target="_blank">隐私权政策</a></li>
+        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">隐私权政策</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">隐私权政策</a></li>
     </ul>
 
     <h2>4. 联系我们</h2>
@@ -212,8 +244,8 @@
 
     <h2>3. Servicios de terceros</h2>
     <ul>
-        <li><strong>Google Play Services:</strong> Inicio de sesión, Clasificación. <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> Publicidad. <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Política de privacidad</a></li>
+        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a></li>
+        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Política de privacidad</a></li>
     </ul>
 
     <h2>4. Contáctenos</h2>
