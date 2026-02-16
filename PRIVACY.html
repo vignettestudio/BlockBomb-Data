@@ -3,53 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - Vignette Studio</title>
+<title>Privacy Policy - Block Bomb</title>
 <style>
-    /* 기본 스타일 초기화 */
-    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
-    
-    /* 제목 스타일 */
-    h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
-    h2 { color: #007bff; margin-top: 30px; font-size: 1.2em; }
-    h3 { color: #555; margin-top: 20px; }
-    
-    /* 버튼 그룹 스타일 */
-    .btn-group { margin-bottom: 30px; text-align: center; }
-    
-    /* 버튼 디자인 */
-    .btn { 
-        display: inline-block; 
-        padding: 10px 20px; 
-        margin: 5px; 
-        border: 1px solid #ddd; 
-        border-radius: 20px; 
-        cursor: pointer; 
-        background-color: #f9f9f9; 
-        font-weight: bold; 
-        text-decoration: none; 
-        color: #555;
-        transition: 0.2s;
-    }
-    
-    .btn:hover { background-color: #eee; }
-    
-    .btn.active { 
-        background-color: #007bff !important; 
-        color: white !important; 
-        border-color: #007bff !important; 
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    /* 내용 섹션 제어 */
+    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; text-align: left; }
+    h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; text-align: center; }
+    h2 { color: #007bff; margin-top: 30px; font-size: 1.2em; border-left: 5px solid #007bff; padding-left: 10px; }
+    .btn-group { margin-bottom: 30px; text-align: center; position: sticky; top: 0; background: white; padding: 10px 0; z-index: 100; border-bottom: 1px solid #eee; }
+    .btn { display: inline-block; padding: 10px 15px; margin: 2px; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; background-color: #f9f9f9; font-weight: bold; text-decoration: none; color: #555; transition: 0.2s; font-size: 0.85em; }
+    .btn.active { background-color: #007bff !important; color: white !important; border-color: #007bff !important; }
     .content-section { display: none; } 
-    .show { display: block; } 
-    
-    /* 링크 색상 */
+    .footer-home { margin-top: 50px; text-align: center; padding: 20px; border-top: 1px solid #eee; }
     a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    
-    ul { margin-bottom: 15px; }
-    li { margin-bottom: 5px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
 </style>
 <script>
     function showLang(langId) {
@@ -57,20 +23,22 @@
         for (var i = 0; i < contents.length; i++) { contents[i].style.display = 'none'; }
         var buttons = document.getElementsByClassName('btn');
         for (var i = 0; i < buttons.length; i++) { buttons[i].classList.remove('active'); }
-        
         var targetContent = document.getElementById(langId);
         var targetButton = document.getElementById('btn-' + langId);
-        
         if (targetContent) targetContent.style.display = 'block';
         if (targetButton) targetButton.classList.add('active');
     }
-    window.onload = function() { showLang('en'); };
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'en';
+        showLang(lang);
+    };
 </script>
 </head>
 <body>
 
 <div class="btn-group">
-    <a id="btn-en" class="btn active" onclick="showLang('en')">English</a>
+    <a id="btn-en" class="btn" onclick="showLang('en')">English</a>
     <a id="btn-ko" class="btn" onclick="showLang('ko')">한국어</a>
     <a id="btn-ja" class="btn" onclick="showLang('ja')">日本語</a>
     <a id="btn-tw" class="btn" onclick="showLang('tw')">繁體中文</a>
@@ -78,178 +46,90 @@
     <a id="btn-es" class="btn" onclick="showLang('es')">Español</a>
 </div>
 
-<div id="en" class="content-section">
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> 2026-02-01</p>
-    <p><strong>Vignette Studio</strong> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile game <strong>Block Bomb</strong>.</p>
-    
-    <h2>1. Information We Collect</h2>
-    <p>We collect limited information to provide a better gaming experience, specifically via <strong>Google Sign-In</strong> services:</p>
+<div id="ko" class="content-section">
+    <h1>개인정보 처리방침 (Block Bomb)</h1>
+    <p><strong>시행일:</strong> 2026년 2월 17일</p>
+    <h2>1. 수집 항목 및 방법</h2>
     <ul>
-        <li><strong>User ID & Nickname:</strong> Used to identify your account and display your name on the leaderboard.</li>
-        <li><strong>Game Data:</strong> Your scores and progress are stored to maintain your gameplay history.</li>
+        <li>사용자 식별 정보(Google ID, 닉네임) 또는 게스트 ID.</li>
+        <li>광고 및 통계를 위한 <strong>광고 식별자(ADID/IDFA)</strong> 및 게임 이용 기록.</li>
     </ul>
-
-    <h2>2. Data Deletion Requests</h2>
-    <p>You have the right to request the deletion of your personal data stored in our game. If you wish to delete your account and game data, please contact us at:</p>
+    <h2>2. 이용 목적</h2>
     <ul>
-        <li><strong>Email:</strong> vignettemanager@gmail.com</li>
+        <li>게임 데이터 저장/복구 및 글로벌 랭킹 서비스 제공.</li>
+        <li>보상형 광고 송출 및 서비스 통계 분석.</li>
     </ul>
-    <p>Upon receiving your request, we will permanently delete your User ID, scores, and progress from our servers within 30 days.</p>
-
-    <h2>3. Third-Party Services</h2>
+    <h2>3. 제3자 서비스 및 링크</h2>
     <ul>
-        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
+        <li>Google Play Services: <a href="https://policies.google.com/privacy" target="_blank">개인정보 처리방침</a></li>
+        <li>Unity Ads / Analytics: <a href="https://unity3d.com/legal/privacy-policy" target="_blank">개인정보 처리방침</a></li>
     </ul>
-
-    <h2>4. Contact Us</h2>
-    <p>If you have any questions, please contact us at <strong>vignettemanager@gmail.com</strong>.</p>
+    <h2>4. 파기 및 아동 보호</h2>
+    <ul>
+        <li>삭제 요청 시 30일 이내에 영구 파기합니다.</li>
+        <li>당사는 만 13세 미만 아동의 정보를 고의로 수집하지 않습니다.</li>
+    </ul>
+    <p><strong>문의:</strong> vignettemanager@gmail.com</p>
 </div>
 
-<div id="ko" class="content-section">
-    <h1>개인정보 처리방침</h1>
-    <p><strong>시행일:</strong> 2026년 2월 1일</p>
-    <p><strong>Vignette Studio</strong>는 사용자의 개인정보를 중요하게 생각하며, <strong>Block Bomb</strong> 서비스 이용과 관련된 정보를 보호하기 위해 최선을 다하고 있습니다.</p>
-
-    <h2>1. 수집하는 개인정보 항목</h2>
-    <p>원활한 게임 서비스 제공을 위해 <strong>Google 로그인</strong>을 통해 다음과 같은 최소한의 정보를 수집합니다:</p>
+<div id="en" class="content-section">
+    <h1>Privacy Policy (Block Bomb)</h1>
+    <p><strong>Effective Date:</strong> Feb 17, 2026</p>
+    <h2>1. Information We Collect</h2>
     <ul>
-        <li><strong>사용자 ID 및 닉네임:</strong> 계정 식별 및 랭킹 표시를 위해 사용됩니다.</li>
-        <li><strong>게임 데이터:</strong> 점수, 진행 상황 등의 데이터가 저장됩니다.</li>
+        <li>User ID, Nickname (via Google), or Guest ID.</li>
+        <li><strong>Advertising Identifiers (ADID/IDFA)</strong> and game usage data.</li>
     </ul>
-
-    <h2>2. 데이터 삭제 요청</h2>
-    <p>사용자는 언제든지 자신의 개인정보 삭제를 요청할 수 있습니다. 계정 및 게임 데이터 삭제를 원하실 경우 아래 이메일로 문의해 주세요:</p>
+    <h2>2. Third-Party Services</h2>
     <ul>
-        <li><strong>이메일:</strong> vignettemanager@gmail.com</li>
+        <li>Google Play Services: <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+        <li>Unity Ads / Analytics: <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
     </ul>
-    <p>요청이 접수되면 30일 이내에 서버에서 귀하의 사용자 ID와 모든 게임 데이터를 영구적으로 삭제합니다.</p>
-
-    <h2>3. 제3자 서비스 제공자</h2>
-    <ul>
-        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">개인정보 처리방침</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">개인정보 처리방침</a></li>
-    </ul>
-
-    <h2>4. 문의하기</h2>
-    <p>개인정보 관련 문의사항은 <strong>vignettemanager@gmail.com</strong>으로 연락 주시기 바랍니다.</p>
+    <h2>3. Data Deletion & Children</h2>
+    <p>We delete data within 30 days upon request. We do not knowingly collect information from children under 13.</p>
 </div>
 
 <div id="ja" class="content-section">
-    <h1>プライバシーポリシー</h1>
-    <p><strong>発効日:</strong> 2026年2月1日</p>
-    <p><strong>Vignette Studio</strong>は、<strong>Block Bomb</strong>における利用者の個人情報の保護に尽力しています。</p>
-
+    <h1>プライバシーポリシー (Block Bomb)</h1>
     <h2>1. 収集する情報</h2>
-    <p>より良いゲーム体験を提供するために、<strong>Google サインイン</strong>を通じて以下の情報を収集します。</p>
+    <p>Google ID、ニックネーム、<strong>広告識別子(ADID/IDFA)</strong>、およびゲーム利用記録。</p>
+    <h2>2. 第三者サービス</h2>
     <ul>
-        <li><strong>ユーザーIDとニックネーム:</strong> アカウントの識別およびランキング表示に使用されます。</li>
-        <li><strong>ゲームデータ:</strong> スコアや進行状況が保存されます。</li>
+        <li>Google Play Services: <a href="https://policies.google.com/privacy" target="_blank">ポリシー</a></li>
+        <li>Unity Ads / Analytics: <a href="https://unity3d.com/legal/privacy-policy" target="_blank">ポリシー</a></li>
     </ul>
-
-    <h2>2. データの削除リクエスト</h2>
-    <p>利用者は自身の個人データの削除をリクエストする権利があります。アカウントおよびゲームデータの削除をご希望の場合は、下記までご連絡ください。</p>
-    <ul>
-        <li><strong>メール:</strong> vignettemanager@gmail.com</li>
-    </ul>
-    <p>リクエストを受け付け次第、30日以内にサーバーからユーザーIDとすべてのゲームデータを完全に削除いたします。</p>
-
-    <h2>3. 第三者サービス</h2>
-    <ul>
-        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google ポリシー</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity ポリシー</a></li>
-    </ul>
-
-    <h2>4. お問い合わせ</h2>
-    <p>ご質問等は <strong>vignettemanager@gmail.com</strong> までご連絡ください。</p>
+    <p>削除依頼は <strong>vignettemanager@gmail.com</strong> まで。13歳未満の児童のデータは収集しません。</p>
 </div>
 
 <div id="tw" class="content-section">
-    <h1>隱私權政策</h1>
-    <p><strong>生效日期:</strong> 2026年2월 1일</p>
-    <p><strong>Vignette Studio</strong> 非常重視您的隱私。本政策說明我們在 <strong>Block Bomb</strong> 中如何收集和使用資訊。</p>
-
-    <h2>1. 我們收集的資訊</h2>
-    <p>為了提供更好的遊戲體驗，我們透過 <strong>Google 登入</strong> 收集以下最少資訊：</p>
-    <ul>
-        <li><strong>使用者ID和暱稱:</strong> 用於識別帳戶並在排行榜上顯示您的名字。</li>
-        <li><strong>遊戲數據:</strong> 儲存您的分數和遊戲進度。</li>
-    </ul>
-
-    <h2>2. 數據刪除請求</h2>
-    <p>您有權請求刪除儲存在我們遊戲中的個人數據。如果您希望刪除帳戶和數據(個人資料)，請聯繫我們：</p>
-    <ul>
-        <li><strong>電子郵件:</strong> vignettemanager@gmail.com</li>
-    </ul>
-    <p>收到請求後，我們將在30天內從伺服器永久刪除您的使用者ID和所有遊戲數據。</p>
-
-    <h2>3. 第三方服務</h2>
-    <ul>
-        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">隱私權政策</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">隱私權政策</a></li>
-    </ul>
-
-    <h2>4. 聯繫我們</h2>
-    <p>如有疑問，請聯繫 <strong>vignettemanager@gmail.com</strong>。</p>
+    <h1>隱私權政策 (Block Bomb)</h1>
+    <h2>1. 收集項目</h2>
+    <p>Google ID、暱稱、<strong>廣告識別碼(ADID)</strong> 及遊戲紀錄。</p>
+    <h2>2. 第三方服務</h2>
+    <p>Google Play 服務及 Unity 廣告/分析。詳情請參閱其官方隱私政策連結。</p>
+    <p>數據刪除請聯絡 <strong>vignettemanager@gmail.com</strong>。我們不收集 13 歲以下兒童的資訊。</p>
 </div>
 
 <div id="cn" class="content-section">
-    <h1>隐私政策</h1>
-    <p><strong>生效日期:</strong> 2026年2月1일</p>
-    <p><strong>Vignette Studio</strong> 非常重视您的隐私。本政策说明我们在 <strong>Block Bomb</strong> 中如何收集和使用信息。</p>
-
-    <h2>1. 我们收集的信息</h2>
-    <p>为了提供更好的游戏体验，我们通过 <strong>Google 登录</strong> 收集以下最少信息：</p>
-    <ul>
-        <li><strong>用户ID和昵称:</strong> 用于识别账户并在排行榜上显示您的名字。</li>
-        <li><strong>游戏数据:</strong> 存储您的分数和游戏进度。</li>
-    </ul>
-
-    <h2>2. 数据删除请求</h2>
-    <p>您有权请求删除存储在我们游戏中的个人数据。如果您希望删除账户和数据，请联系我们：</p>
-    <ul>
-        <li><strong>电子邮箱:</strong> vignettemanager@gmail.com</li>
-    </ul>
-    <p>收到请求后，我们将在30天内从服务器永久删除您的用户ID和所有游戏数据。</p>
-
-    <h2>3. 第三方服务</h2>
-    <ul>
-        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">隐私权政策</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">隐私权政策</a></li>
-    </ul>
-
-    <h2>4. 联系我们</h2>
-    <p>如有疑问，请联系 <strong>vignettemanager@gmail.com</strong>。</p>
+    <h1>隐私政策 (Block Bomb)</h1>
+    <h2>1. 收集项目</h2>
+    <p>Google ID、昵称、<strong>广告识别码(ADID)</strong> 及游戏纪录。</p>
+    <h2>2. 第三方服务</h2>
+    <p>Google Play 服务及 Unity 广告/分析。详情请参阅其官方隐私政策链接。</p>
+    <p>数据删除请联系 <strong>vignettemanager@gmail.com</strong>。我们不收集 13 岁以下儿童的信息。</p>
 </div>
 
 <div id="es" class="content-section">
-    <h1>Política de privacidad</h1>
-    <p><strong>Fecha de vigencia:</strong> 1 de febrero de 2026</p>
-    <p><strong>Vignette Studio</strong> se compromete a proteger su privacidad al utilizar <strong>Block Bomb</strong>.</p>
+    <h1>Política de Privacidad (Block Bomb)</h1>
+    <h2>1. Información recopilada</h2>
+    <p>Google ID, apodo, <strong>Identificadores de anuncios (ADID)</strong> y datos de uso.</p>
+    <h2>2. Servicios de terceros</h2>
+    <p>Google Play y Unity Ads/Analytics. Consulte sus políticas de privacidad en sus sitios oficiales.</p>
+    <p>Contacto para eliminación: <strong>vignettemanager@gmail.com</strong>. No recopilamos datos de menores de 13 años.</p>
+</div>
 
-    <h2>1. Información que recopilamos</h2>
-    <p>Recopilamos información limitada a través de <strong>Google Sign-In</strong> para mejorar su experiencia:</p>
-    <ul>
-        <li><strong>ID de usuario y apodo:</strong> Se utilizan para identificar su cuenta y mostrar su nombre en la clasificación.</li>
-        <li><strong>Datos del juego:</strong> Sus puntuaciones y progreso se guardan para mantener su historial.</li>
-    </ul>
-
-    <h2>2. Solicitud de eliminación de datos</h2>
-    <p>Tiene derecho a solicitar la eliminación de sus datos personales. Si desea eliminar su cuenta y datos, contáctenos en:</p>
-    <ul>
-        <li><strong>Correo electrónico:</strong> vignettemanager@gmail.com</li>
-    </ul>
-    <p>Tras recibir su solicitud, eliminaremos permanentemente su ID de usuario y los datos del juego de nuestros servidores en un plazo de 30 días.</p>
-
-    <h2>3. Servicios de terceros</h2>
-    <ul>
-        <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a></li>
-        <li><strong>Unity Ads / Analytics:</strong> <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Política de privacidad</a></li>
-    </ul>
-
-    <h2>4. Contáctenos</h2>
-    <p>Si tiene alguna pregunta, contáctenos en <strong>vignettemanager@gmail.com</strong>.</p>
+<div class="footer-home">
+    <a href="index.html">← Back to Home / 홈으로 돌아가기</a>
 </div>
 
 </body>
