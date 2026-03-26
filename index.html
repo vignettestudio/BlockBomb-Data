@@ -7,16 +7,14 @@
 <style>
 body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; text-align: center; }
     h1 { margin-top: 10px; margin-bottom: 10px; color: #222; }
-    .slogan { color: #666; font-style: italic; margin-bottom: 30px; }}
+    .slogan { color: #666; font-style: italic; margin-bottom: 30px; }
     
-    /* 추가된 부분: 페이드 효과를 위한 감싸는 박스 설정 */
     .scroll-container {
         position: relative;
         margin-bottom: 40px;
         overflow: hidden;
     }
 
-    /* 추가된 부분: 양쪽 페이드(그라데이션) 효과 */
     .scroll-container::before,
     .scroll-container::after {
         content: "";
@@ -36,26 +34,22 @@ body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width:
         background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
     }
 
-    /* 변경된 부분: 가로 스크롤 적용 및 페이드 여백 추가 */
     .btn-group { 
         display: flex; 
         overflow-x: auto; 
         white-space: nowrap; 
         gap: 10px; 
-        padding: 10px 20px; /* 양옆 페이드 공간 확보를 위해 패딩 수정 */
+        padding: 10px 20px;
         -webkit-overflow-scrolling: touch; 
     }
     
-    /* 변경된 부분: PC 등 넓은 화면에서는 중앙 정렬 유지 및 페이드 숨김 */
     @media (min-width: 650px) {
         .btn-group { justify-content: center; }
         .scroll-container::before, .scroll-container::after { display: none; }
     }
     
-    /* 추가된 부분: 모바일에서 지저분한 스크롤바 숨기기 (기능은 유지됨) */
     .btn-group::-webkit-scrollbar { display: none; }
     
-    /* 변경된 부분: 버튼 크기 고정(flex-shrink) */
     .btn { 
         display: inline-block; 
         padding: 8px 16px; 
@@ -107,42 +101,42 @@ body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width:
 
 <div id="en" class="content-section">
     <div style="text-align: center;"><h1>Welcome to Vignette Studio</h1><p class="slogan">"Small scenes make memorable stories."</p><img src="intrologo.png" class="game-img" alt="Block Bomb"></div>
-    <h2 class="game-header">Our Project: Block Bomb <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
+    <h2 class="game-header">Our Project: Block Bomb <a href="https://play.google.com/store/apps/details?id=com.vignettestudio.blockbomb&hl=en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="150"></a></h2>
     <p>Strategic explosions on a chessboard! Place blocks and challenge your high score.</p>
     <div class="footer-links">Contact: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=en">Privacy Policy</a></div>
 </div>
 
 <div id="ko" class="content-section">
     <div style="text-align: center;"><h1>Vignette Studio에 오신 것을 환영합니다</h1><p class="slogan">"작은 장면 하나하나가 모여 기억에 남는 이야기를 만듭니다."</p><img src="intrologo.png" class="game-img" alt="Block Bomb"></div>
-    <h2 class="game-header">프로젝트: 블록밤 (Block Bomb) <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
+    <h2 class="game-header">프로젝트: 블록밤 (Block Bomb) <a href="https://play.google.com/store/apps/details?id=com.vignettestudio.blockbomb&hl=ko" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play에서 다운로드" width="150"></a></h2>
     <p>체스보드 위에서 펼쳐지는 전략적인 폭발! 블록을 배치하고 최고 점수에 도전하세요.</p>
     <div class="footer-links">이메일: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=ko">개인정보 처리방침</a></div>
 </div>
 
 <div id="ja" class="content-section">
     <div style="text-align: center;"><h1>Vignette Studioへようこそ</h1><p class="slogan">「小さなシーンが積み重なり、記憶に残る物語を作ります」</p><img src="intrologo.png" class="game-img" alt="Block Bomb"></div>
-    <h2 class="game-header">Block Bomb (ブロックボム) <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
+    <h2 class="game-header">Block Bomb (ブロックボム) <a href="https://play.google.com/store/apps/details?id=com.vignettestudio.blockbomb&hl=ja" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Playで手に入れよう" width="150"></a></h2>
     <p>チェス盤の上で繰り広げられる戦略的爆発！ハイスコアを目指しましょう。</p>
     <div class="footer-links">メール: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=ja">プライバシーポリシー</a></div>
 </div>
 
 <div id="tw" class="content-section">
     <div style="text-align: center;"><h1>歡迎來到 Vignette Studio</h1><p class="slogan">「每一個小場景，匯聚成難忘的故事。」</p><img src="intrologo.png" class="game-img" alt="Block Bomb"></div>
-    <h2 class="game-header">Block Bomb (方塊炸彈) <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
+    <h2 class="game-header">Block Bomb (方塊炸彈) <a href="https://play.google.com/store/apps/details?id=com.vignettestudio.blockbomb&hl=zh_TW" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="在Google Play取得" width="150"></a></h2>
     <p>棋盤上的策略爆炸！放置方塊並挑戰最高分。</p>
     <div class="footer-links">郵箱: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=tw">隱私政策</a></div>
 </div>
 
 <div id="cn" class="content-section">
     <div style="text-align: center;"><h1>欢迎来到 Vignette Studio</h1><p class="slogan">“每一个小场景，汇聚成难忘的故事。”</p><img src="intrologo.png" class="game-img" alt="Block Bomb"></div>
-    <h2 class="game-header">Block Bomb (方块炸弹) <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
+    <h2 class="game-header">Block Bomb (方块炸弹) <a href="https://play.google.com/store/apps/details?id=com.vignettestudio.blockbomb&hl=zh_CN" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="在Google Play下载" width="150"></a></h2>
     <p>棋盘上的策略爆炸！放置方块并挑战最高分。</p>
     <div class="footer-links">邮箱: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=cn">隐私政策</a></div>
 </div>
 
 <div id="es" class="content-section">
     <div style="text-align: center;"><h1>Bienvenido a Vignette Studio</h1><p class="slogan">"Las pequeñas escenas crean historias memorables."</p><img src="intrologo.png" class="game-img" alt="Block Bomb"></div>
-    <h2 class="game-header">Proyecto: Block Bomb <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" width="130"></a></h2>
+    <h2 class="game-header">Proyecto: Block Bomb <a href="https://play.google.com/store/apps/details?id=com.vignettestudio.blockbomb&hl=es" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponible en Google Play" width="150"></a></h2>
     <p>¡Explosiones estratégicas en un tablero de ajedrez! Desafía tu puntuación más alta.</p>
     <div class="footer-links">Email: vignettemanager@gmail.com | <a href="PRIVACY.html?lang=es">Política de privacidad</a></div>
 </div>
